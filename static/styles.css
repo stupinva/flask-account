@@ -1,0 +1,9 @@
+table { border-width: 1px; border-style: solid; border-collapse: collapse; empty-cells: show; }
+td.nb { border-width: 0; background-color: lightyellow; }
+td.nbc { border-width: 0px; background-color: lightyellow; text-align: center; }
+td.nbrc { border-width: 0px; background-color: lightyellow; text-align: right; }
+input[type="text"] { width: 300px; }
+input[type="text"].login { width: 200px; }
+input[type="text"].password { width: 200px; }
+input[type="submit"] { width: 100px; }
+input[type="submit"].thin { width: 40px; }

@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Мастер учётных записей</title>
+  </head>
+  <body>
+    <div align="center">
+
+    <h3>Мастер учётных записей</h3>
+    <form method="POST">
+      <table>
+        <tr>
+          <td class="nb"><label for="surname">Фамилия</label></td>
+          <td class="nb" colspan="2"><input type="text" name="surname" value="{{ surname }}" id="surname"></td>
+        </tr>
+        <tr>
+          <td class="nb"><label for="name">Имя</label></td>
+          <td class="nb" colspan="2"><input type="text" name="name" value="{{ name }}" id="name"></td>
+        </tr>
+        <tr>
+          <td class="nb"><label for="patronym">Отчество</label></td>
+          <td class="nb" colspan="2"><input type="text" name="patronym" value="{{ patronym }}" id="patronym"></td>
+        </tr>
+        <tr>
+          <td class="nb">Логин</td>
+          <td class="nb">
+            {{ login }}
+          </td>
+          <td class="nbrc">
+            <input type="hidden" name="ilogin" value="{{ ilogin }}">
+            <input class="thin" type="submit" name="prevlogin" value="&lt;">
+            {{ ilogin }}
+            <input class="thin" type="submit" name="nextlogin" value="&gt;">
+          </td>
+        </tr>
+        <tr>
+          <td class="nb">Пароль</td>
+          <td class="nb">
+            <input type="hidden" name="password" value="{{ password }}">
+            {{ password }}
+          </td>
+          <td class="nbrc">
+            <input type="submit" name="nextpassword" value="Другой">
+          </td>
+        </tr>
+        <tr>
+          <td class="nbc" colspan="3">
+            <input type="submit" name="refresh" value="Обновить">
+            <input type="submit" name="reset" value="Очистить">
+          </td>
+        </tr>
+      </table>
+    </form>
+    </div>
+  </body>
+</html>
